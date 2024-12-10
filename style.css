@@ -1,0 +1,126 @@
+body {
+    font-family: serif;
+}
+
+h1, h2 {
+    text-align:center;
+}
+
+.header {
+    background-color:lightsteelblue;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.festival-image {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.sidebar {
+    position: fixed; /* Фиксируем навигацию */
+    top: 10; /* Расположение от верхней части страницы */
+    right: 0; /* Расположение от левой части страницы */
+    width: 100px; /* Ширина бокового меню */
+    height: 20%; /* Высота на всю высоту страницы */
+    background-color: white; /* Цвет фона для бокового меню */
+    z-index: 1000; /* Устанавливаем высокий z-index, чтобы навигация была поверх контента */
+    border-radius: 5px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Отступы между пунктами меню */
+}
+
+.sidebar ul li a {
+    color:  lightsteelblue ;
+    text-decoration: none;
+    padding: 5px; /* Отступы вокруг текста ссылки */
+    display: block; /* Делаем ссылки блочными элементами для удобства клика */
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(131, 149, 172); /* Цвет фона при наведении на ссылку */
+}
+
+.content {
+    padding: 5px;
+}
+
+.activities .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.activity {
+    background-color:lightsteelblue;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.partners .partner-list {
+    list-style-type: none;
+}
+
+.partners {
+    padding: 10px
+}
+
+.partners .grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.partner {
+    background-color: white;
+    border: 3px solid lightsteelblue;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px; 
+    flex: 0 1 200px; 
+    max-width: 300px; 
+    text-align: center; 
+}
+
+.partner-image {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: lightsteelblue;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+@media (max-width: 980px) {
+    .header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
